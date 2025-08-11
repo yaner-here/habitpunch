@@ -7,3 +7,6 @@
 
 # Cloudflare wrangler
 wrangler.toml
+
+# Environment Variables
+.env
