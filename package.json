@@ -6,12 +6,16 @@
         "node": ">=22.18.0"
     },
     "scripts": {
-        "build": "react-router build",
-        "dev": "react-router dev",
-        "start": "react-router-serve ./build/server/index.js",
-        "typecheck": "react-router typegen && tsc"
+		"build": "react-router build",
+		"cf-typegen": "wrangler types",
+		"deploy": "npm run build && wrangler deploy",
+		"dev": "react-router dev",
+		"postinstall": "npm run cf-typegen",
+		"preview": "npm run build && vite preview",
+		"typecheck": "npm run cf-typegen && react-router typegen && tsc -b"
     },
     "dependencies": {
+        "@cloudflare/vite-plugin": "^1.11.2",
         "@headlessui/react": "^2.2.7",
         "@react-router/node": "^7.7.1",
         "@react-router/serve": "^7.7.1",
