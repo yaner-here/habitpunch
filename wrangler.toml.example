@@ -1,0 +1,10 @@
+name = "habitpunch"
+main = "build/index.js"
+compatibility_date = "2025-08-11"
+node_compat = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "habitpunch_db"
+database_id = "" # Fill your database_id!
+migrations_dir = "drizzle/migrations"
